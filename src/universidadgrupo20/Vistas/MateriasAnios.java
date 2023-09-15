@@ -29,21 +29,110 @@ public class MateriasAnios extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        jBPrimer = new javax.swing.JButton();
+        jBSegundo = new javax.swing.JButton();
+        jBTercero = new javax.swing.JButton();
+        jBSalir = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel1.setText("Materias");
+
+        jBPrimer.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jBPrimer.setText("1er AÑO");
+        jBPrimer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBPrimerActionPerformed(evt);
+            }
+        });
+
+        jBSegundo.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jBSegundo.setText("2do AÑO");
+        jBSegundo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBSegundoActionPerformed(evt);
+            }
+        });
+
+        jBTercero.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jBTercero.setText("3er AÑO");
+        jBTercero.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBTerceroActionPerformed(evt);
+            }
+        });
+
+        jBSalir.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jBSalir.setText("Salir");
+        jBSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBSalirActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(110, 110, 110)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jBPrimer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jBSegundo, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE)
+                                    .addComponent(jBTercero, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(128, 128, 128)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 147, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jBSalir)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(44, 44, 44)
+                .addComponent(jBPrimer)
+                .addGap(18, 18, 18)
+                .addComponent(jBSegundo)
+                .addGap(18, 18, 18)
+                .addComponent(jBTercero)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                .addComponent(jBSalir)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jBTerceroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTerceroActionPerformed
+        dispose();
+        new MateriasNotas().setVisible(true);
+    }//GEN-LAST:event_jBTerceroActionPerformed
+
+    private void jBPrimerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBPrimerActionPerformed
+        dispose();
+        new MateriasNotas().setVisible(true);
+    }//GEN-LAST:event_jBPrimerActionPerformed
+
+    private void jBSegundoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSegundoActionPerformed
+        dispose();
+        new MateriasNotas().setVisible(true);
+    }//GEN-LAST:event_jBSegundoActionPerformed
+
+    private void jBSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSalirActionPerformed
+        dispose();
+        new MenuAdmin().setVisible(true);
+    }//GEN-LAST:event_jBSalirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -82,5 +171,10 @@ public class MateriasAnios extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jBPrimer;
+    private javax.swing.JButton jBSalir;
+    private javax.swing.JButton jBSegundo;
+    private javax.swing.JButton jBTercero;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
