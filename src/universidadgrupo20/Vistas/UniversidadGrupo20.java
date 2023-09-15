@@ -1,6 +1,7 @@
 
-package universidadgrupo20;
+package universidadgrupo20.Vistas;
 
+import universidadgrupo20.*;
 import java.sql.Connection;
 import universidadgrupo20.accesoADatos.Conexion;
 

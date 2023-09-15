@@ -2,18 +2,20 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
  */
-package universidadgrupo20;
+package universidadgrupo20.Vistas;
+
+import universidadgrupo20.*;
 
 /**
  *
  * @author jfa_j
  */
-public class JIFmateriascursadas extends javax.swing.JInternalFrame {
+public class JIFinscr extends javax.swing.JInternalFrame {
 
     /**
-     * Creates new form JIFmateriascursadas
+     * Creates new form JIFinscr
      */
-    public JIFmateriascursadas() {
+    public JIFinscr() {
         initComponents();
     }
 
@@ -32,8 +34,7 @@ public class JIFmateriascursadas extends javax.swing.JInternalFrame {
         setClosable(true);
         setMaximizable(true);
         setResizable(true);
-        setTitle("Materias Cursadas");
-        setToolTipText("");
+        setTitle("Inscripciones");
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -69,14 +70,14 @@ public class JIFmateriascursadas extends javax.swing.JInternalFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 554, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 552, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 239, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
