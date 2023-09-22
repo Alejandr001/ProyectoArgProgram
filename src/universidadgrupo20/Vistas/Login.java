@@ -42,6 +42,12 @@ public class Login extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel3.setText("Contraseña");
 
+        jTUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTUsuarioActionPerformed(evt);
+            }
+        });
+
         jBIngresar.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jBIngresar.setText("Ingresar");
         jBIngresar.addActionListener(new java.awt.event.ActionListener() {
@@ -125,11 +131,16 @@ public class Login extends javax.swing.JFrame {
     private void jBIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBIngresarActionPerformed
         dispose();
         new MenuAdmin().setVisible(true);
+        
     }//GEN-LAST:event_jBIngresarActionPerformed
 
     private void jBOlviContraseniaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBOlviContraseniaActionPerformed
         JOptionPane.showMessageDialog(this, "Se envio la contraseña al correo enlasado al usuario, gracias");
     }//GEN-LAST:event_jBOlviContraseniaActionPerformed
+
+    private void jTUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTUsuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTUsuarioActionPerformed
 
     /**
      * @param args the command line arguments

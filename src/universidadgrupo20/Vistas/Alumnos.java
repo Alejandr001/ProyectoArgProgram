@@ -18,6 +18,9 @@ public class Alumnos extends javax.swing.JFrame {
      */
     public Alumnos() {
         initComponents();
+        setLocationRelativeTo(null);
+        
+        
     }
 
     /**

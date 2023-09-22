@@ -16,6 +16,7 @@ public class AlumnosMaterias extends javax.swing.JFrame {
      */
     public AlumnosMaterias() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
