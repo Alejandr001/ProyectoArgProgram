@@ -40,8 +40,8 @@ public class Login extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
-        jButtonRECUPERAR = new javax.swing.JButton();
-        jButtonINGRESAR = new javax.swing.JButton();
+        jBRecuperar = new javax.swing.JButton();
+        jBIngresar = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -92,27 +92,37 @@ public class Login extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Bienvenido, ingrese los datos de usuario", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 1, 12))); // NOI18N
 
-        jButtonRECUPERAR.setBackground(new java.awt.Color(255, 255, 255));
-        jButtonRECUPERAR.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jButtonRECUPERAR.setText("Recuperar");
-        jButtonRECUPERAR.addMouseListener(new java.awt.event.MouseAdapter() {
+        jBRecuperar.setBackground(new java.awt.Color(255, 255, 255));
+        jBRecuperar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jBRecuperar.setText("Recuperar");
+        jBRecuperar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jButtonRECUPERARMouseEntered(evt);
+                jBRecuperarMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jButtonRECUPERARMouseExited(evt);
+                jBRecuperarMouseExited(evt);
+            }
+        });
+        jBRecuperar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBRecuperarActionPerformed(evt);
             }
         });
 
-        jButtonINGRESAR.setBackground(new java.awt.Color(255, 255, 255));
-        jButtonINGRESAR.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jButtonINGRESAR.setText("Ingresar");
-        jButtonINGRESAR.addMouseListener(new java.awt.event.MouseAdapter() {
+        jBIngresar.setBackground(new java.awt.Color(255, 255, 255));
+        jBIngresar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jBIngresar.setText("Ingresar");
+        jBIngresar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jButtonINGRESARMouseEntered(evt);
+                jBIngresarMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jButtonINGRESARMouseExited(evt);
+                jBIngresarMouseExited(evt);
+            }
+        });
+        jBIngresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBIngresarActionPerformed(evt);
             }
         });
 
@@ -151,9 +161,9 @@ public class Login extends javax.swing.JFrame {
                         .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(jButtonRECUPERAR)
+                            .addComponent(jBRecuperar)
                             .addGap(96, 96, 96)
-                            .addComponent(jButtonINGRESAR, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jBIngresar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(69, 69, 69))
         );
@@ -175,9 +185,9 @@ public class Login extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonRECUPERAR)
-                    .addComponent(jButtonINGRESAR))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jBRecuperar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jBIngresar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -193,7 +203,7 @@ public class Login extends javax.swing.JFrame {
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(14, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -277,21 +287,21 @@ public class Login extends javax.swing.JFrame {
       System.exit(0);
     }//GEN-LAST:event_jLabelSalirMouseClicked
 
-    private void jButtonINGRESARMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonINGRESARMouseEntered
-      jButtonINGRESAR.setForeground(Color.GRAY);
-    }//GEN-LAST:event_jButtonINGRESARMouseEntered
+    private void jBIngresarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBIngresarMouseEntered
+      jBIngresar.setForeground(Color.GRAY);
+    }//GEN-LAST:event_jBIngresarMouseEntered
 
-    private void jButtonINGRESARMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonINGRESARMouseExited
-       jButtonINGRESAR.setForeground(Color.black);
-    }//GEN-LAST:event_jButtonINGRESARMouseExited
+    private void jBIngresarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBIngresarMouseExited
+       jBIngresar.setForeground(Color.black);
+    }//GEN-LAST:event_jBIngresarMouseExited
 
-    private void jButtonRECUPERARMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonRECUPERARMouseExited
-        jButtonRECUPERAR.setForeground(Color.black);
-    }//GEN-LAST:event_jButtonRECUPERARMouseExited
+    private void jBRecuperarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBRecuperarMouseExited
+        jBRecuperar.setForeground(Color.black);
+    }//GEN-LAST:event_jBRecuperarMouseExited
 
-    private void jButtonRECUPERARMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonRECUPERARMouseEntered
-          jButtonRECUPERAR.setForeground(Color.GRAY);
-    }//GEN-LAST:event_jButtonRECUPERARMouseEntered
+    private void jBRecuperarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBRecuperarMouseEntered
+          jBRecuperar.setForeground(Color.GRAY);
+    }//GEN-LAST:event_jBRecuperarMouseEntered
 
     private void jLabelSalirMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelSalirMousePressed
         // TODO add your handling code here:
@@ -316,6 +326,29 @@ yMouse=evt.getY();
      int y= evt.getYOnScreen();
         this.setLocation(x-xMouse, y-yMouse);
     }//GEN-LAST:event_jPanelSuperior1MouseDragged
+
+    private void jBRecuperarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBRecuperarActionPerformed
+        JOptionPane.showMessageDialog(this, "Se envio la contraseña al correo enlasado al usuario, gracias");
+    }//GEN-LAST:event_jBRecuperarActionPerformed
+
+    private void jBIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBIngresarActionPerformed
+       char[] passwordChars = jPasswordCONTRASEÑA.getPassword();
+        String password = new String(passwordChars);
+        String usuario = jTextFUSUARUIO.getText();
+        
+        if(password.equals("administrador")&& usuario.equals("administrador")){
+        dispose();
+        new Principal().setVisible(true);
+        
+        }else if(password.equals("alumno")&& usuario.equals("alumno")){
+        dispose();
+        new PrincipalAlumno().setVisible(true);
+        } else{
+        
+        JOptionPane.showMessageDialog(this, "Usuario o contraseña incorrecta");
+        
+    }  
+    }//GEN-LAST:event_jBIngresarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -359,30 +392,13 @@ yMouse=evt.getY();
     
     
     
-    private void jBIngresarActionPerformed(java.awt.event.ActionEvent evt) {                                           
-       
-        char[] passwordChars = jPasswordCONTRASEÑA.getPassword();
-        String password = new String(passwordChars);
-        String usuario = jTextFUSUARUIO.getText();
+    
         
-        if(password.equals("administrador")&& usuario.equals("administrador")){
-        dispose();
-        new Principal().setVisible(true);
-        
-        }else if(password.equals("alumno")&& usuario.equals("alumno")){
-        dispose();
-        new PrincipalAlumno().setVisible(true);
-        } else{
-        
-        JOptionPane.showMessageDialog(this, "Usuario o contraseña incorrecta");
-        
-    }
-        
-    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Fondo;
-    private javax.swing.JButton jButtonINGRESAR;
-    private javax.swing.JButton jButtonRECUPERAR;
+    private javax.swing.JButton jBIngresar;
+    private javax.swing.JButton jBRecuperar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

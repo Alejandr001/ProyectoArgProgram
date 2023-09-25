@@ -173,6 +173,8 @@ public class PrincipalAlumno extends javax.swing.JFrame {
            jDesktopPaneMenuPrincipal.removeAll();
         jDesktopPaneMenuPrincipal.repaint();
         JOptionPane.showMessageDialog(this, "Saliendo");
+        dispose();
+        new Login().setVisible(true);
     }//GEN-LAST:event_JbSalirActionPerformed
 
     /**
