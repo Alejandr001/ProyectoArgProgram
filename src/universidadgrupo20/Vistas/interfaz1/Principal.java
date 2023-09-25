@@ -108,6 +108,7 @@ public class Principal extends javax.swing.JFrame {
         });
 
         JbMaterias.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        JbMaterias.setIcon(new javax.swing.ImageIcon(getClass().getResource("/universidadgrupo20/Recursos/Iconos/office_folder_icon_219542.png"))); // NOI18N
         JbMaterias.setText("Materias");
         JbMaterias.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         JbMaterias.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
@@ -141,6 +142,7 @@ public class Principal extends javax.swing.JFrame {
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Listado", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 1, 12), new java.awt.Color(255, 255, 255))); // NOI18N
 
         JbListadoMat.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        JbListadoMat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/universidadgrupo20/Recursos/Iconos/iconfinder-518-code-learning-code-learning-education-4212896_114952.png"))); // NOI18N
         JbListadoMat.setText("List. Materias");
         JbListadoMat.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         JbListadoMat.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
@@ -151,6 +153,7 @@ public class Principal extends javax.swing.JFrame {
         });
 
         JbListadoAlu.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        JbListadoAlu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/universidadgrupo20/Recursos/Iconos/icon.png"))); // NOI18N
         JbListadoAlu.setText("List. Alumnos");
         JbListadoAlu.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         JbListadoAlu.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
@@ -184,6 +187,7 @@ public class Principal extends javax.swing.JFrame {
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Inscripciones & Notas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 1, 12), new java.awt.Color(255, 255, 255))); // NOI18N
 
         JbCalificaciones1.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        JbCalificaciones1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/universidadgrupo20/Recursos/Iconos/hand_document_list_paper_file_icon_219540.png"))); // NOI18N
         JbCalificaciones1.setText("Calificaciones");
         JbCalificaciones1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         JbCalificaciones1.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
@@ -194,6 +198,7 @@ public class Principal extends javax.swing.JFrame {
         });
 
         JbInscripcion.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        JbInscripcion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/universidadgrupo20/Recursos/Iconos/curriculum_vitae_paper_document_icon_219537.png"))); // NOI18N
         JbInscripcion.setText("Inscripciones");
         JbInscripcion.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         JbInscripcion.setVerticalTextPosition(javax.swing.SwingConstants.TOP);

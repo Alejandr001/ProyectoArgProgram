@@ -235,6 +235,9 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Times New Roman" size="12" style="1"/>
                     </Property>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/universidadgrupo20/Recursos/Iconos/office_folder_icon_219542.png"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Materias"/>
                     <Property name="horizontalTextPosition" type="int" value="0"/>
                     <Property name="verticalTextPosition" type="int" value="1"/>
@@ -290,6 +293,9 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Times New Roman" size="12" style="1"/>
                     </Property>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/universidadgrupo20/Recursos/Iconos/iconfinder-518-code-learning-code-learning-education-4212896_114952.png"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="List. Materias"/>
                     <Property name="horizontalTextPosition" type="int" value="0"/>
                     <Property name="verticalTextPosition" type="int" value="1"/>
@@ -302,6 +308,9 @@
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Times New Roman" size="12" style="1"/>
+                    </Property>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/universidadgrupo20/Recursos/Iconos/icon.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="List. Alumnos"/>
                     <Property name="horizontalTextPosition" type="int" value="0"/>
@@ -358,6 +367,9 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Times New Roman" size="12" style="1"/>
                     </Property>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/universidadgrupo20/Recursos/Iconos/hand_document_list_paper_file_icon_219540.png"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Calificaciones"/>
                     <Property name="horizontalTextPosition" type="int" value="0"/>
                     <Property name="verticalTextPosition" type="int" value="1"/>
@@ -370,6 +382,9 @@
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Times New Roman" size="12" style="1"/>
+                    </Property>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/universidadgrupo20/Recursos/Iconos/curriculum_vitae_paper_document_icon_219537.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Inscripciones"/>
                     <Property name="horizontalTextPosition" type="int" value="0"/>
