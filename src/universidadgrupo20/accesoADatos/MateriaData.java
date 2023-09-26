@@ -25,13 +25,14 @@ import universidadgrupo20.Entidades.Materia;
   
     public void guardarMateria(Materia materia){
    
-        String sql="INSERT INTO materia (nombre, anioMateria, activo)+ VALUES(?, ?, ?)";
+        String sql="INSERT INTO materia (nombre, año, estado) VALUES(?, ?, ?)";
         
         try {
             PreparedStatement ps=con.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
             ps.setString(1, materia.getNombre());
             ps.setInt(2, materia.getAnioMateria());
             ps.setBoolean(3, materia.isActivo());
+            System.out.println("sql: "+ sql);
             ps.executeUpdate();
             
             ResultSet rs=ps.getGeneratedKeys();
@@ -55,28 +56,30 @@ import universidadgrupo20.Entidades.Materia;
     
     public void modificarMateria(Materia materia){
         
-        String sql="UPDATE materia SET nombre = ?, anioMateria= ?+ WHERE idMateria = ?";
         
-        try {
-            PreparedStatement ps=con.prepareStatement(sql);
-            ps.setString(1, materia.getNombre());
-            ps.setInt(2, materia.getAnioMateria());
-            ps.setInt(3, materia.getIdMateria());
-            int exito = ps.executeUpdate();
-            if(exito==1){
-                JOptionPane.showMessageDialog(null, "Materia Actualizada");
-            
-            }
-            
-        } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Error al modificar las Materias");
+    String sql = "UPDATE materia SET nombre = ?, año = ? WHERE idMateria = ?";
+    System.out.println("Consulta SQL: " + sql);
+    try {
+     
+        PreparedStatement ps = con.prepareStatement(sql);
+        ps.setString(1, materia.getNombre());
+        ps.setInt(2, materia.getAnioMateria());
+        ps.setInt(3, materia.getIdMateria());
+        int exito = ps.executeUpdate();
+        if (exito == 1) {
+            JOptionPane.showMessageDialog(null, "Materia Actualizada");
         }
+    } catch (SQLException ex) {
+        JOptionPane.showMessageDialog(null, "Error al modificar las Materias: " + ex.getMessage());
+    }
+}
+
         
     
-    }
+    
     
     public void eliminarMateria(int id){
-        String sql="UPDATE materia SET activo = 0 WHERE idMateria = ?";
+        String sql="UPDATE materia SET estado = 0 WHERE idMateria = ?";
         try {
             PreparedStatement ps=con.prepareStatement(sql);
             ps.setInt(1, id);
@@ -92,7 +95,7 @@ import universidadgrupo20.Entidades.Materia;
     
     }
     public Materia buscarMateria(int  id){
-        String sql="SELECT nombre, anioMateria FROM materia WHERE idMateria = ? AND activo = 1";
+        String sql="SELECT nombre, año FROM materia WHERE idMateria = ? AND estado = 1";
         Materia materia=null;
         try {
             PreparedStatement ps=con.prepareStatement(sql);
@@ -102,7 +105,7 @@ import universidadgrupo20.Entidades.Materia;
                 materia=new Materia();
                 materia.setIdMateria(id);
                 materia.setNombre(rs.getString("nombre"));
-                materia.setAnioMateria(rs.getInt("anioMateria"));
+                materia.setAnioMateria(rs.getInt("año"));
                 materia.setActivo(true);
             
             } else {
@@ -118,7 +121,7 @@ import universidadgrupo20.Entidades.Materia;
     }
     
     public ArrayList<Materia> listaMaterias(){
-    String sql="SELECT nombre, anioMateria FROM materia WHERE activo = 1";
+    String sql="SELECT nombre, año FROM materia WHERE estado = 1";
         ArrayList <Materia> materias=new ArrayList<>();
         try {
             PreparedStatement ps=con.prepareStatement(sql);
@@ -127,7 +130,7 @@ import universidadgrupo20.Entidades.Materia;
                 Materia materia =new Materia();
                 materia.setIdMateria(rs.getInt("idMateria"));
                 materia.setNombre(rs.getString("nombre"));
-                materia.setAnioMateria(rs.getInt("anioMateria"));
+                materia.setAnioMateria(rs.getInt("año"));
                 materia.setActivo(true);
            
                 materias.add(materia);

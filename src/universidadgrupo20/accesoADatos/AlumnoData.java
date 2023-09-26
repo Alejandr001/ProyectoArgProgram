@@ -91,7 +91,7 @@ public class AlumnoData {
             ps = con.prepareStatement(sql);
             ps.setInt(1, dni);
             ResultSet rs = ps.executeQuery();
-
+            
             if (rs.next()) {
                 alumno = new Alumno();
                 alumno.setIdAlumno(rs.getInt("idAlumno"));
@@ -145,7 +145,7 @@ public class AlumnoData {
 
     public void modificarAlumno(Alumno alumno) {
 
-        String sql = "UPDATE alumno SET dni = ?, nombre= ?, fechaNacimiento = ? WHERE idAlumno= ?";
+        String sql = "UPDATE alumno SET dni = ?, apellido = ?, nombre = ?, fechaNacimiento = ? WHERE idAlumno = ?";
         PreparedStatement ps = null;
 
         try {
@@ -157,11 +157,9 @@ public class AlumnoData {
             ps.setInt(5, alumno.getIdAlumno());
             int exito = ps.executeUpdate();
 
-            if (exito == 1) {
+            if (exito==1) {
 
                 JOptionPane.showMessageDialog(null, "Modificado Exitosamente.");
-            } else {
-                JOptionPane.showMessageDialog(null, "El alumno no existe");
             }
 
         } catch (SQLException ex) {
