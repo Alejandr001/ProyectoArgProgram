@@ -111,7 +111,33 @@ public class InscripcionData {
         }
             return cursadas;
     }
-     
+     public void guardarInscripciones(double nota, int idAlumno,int idMateria) {
+
+        String sql = "INSERT INTO inscripcion (nota ,idAlumno, idMateria) VALUES (?, ?, ?)";
+
+        try {
+            PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            ps.setDouble(1, nota);
+            ps.setInt(2, idAlumno);
+            ps.setInt(3, idMateria);
+           
+            ps.executeUpdate();
+
+            ResultSet rs = ps.getGeneratedKeys();
+
+            if (rs.next()) {
+
+                
+
+                JOptionPane.showMessageDialog(null, "Inscripcion guardada con exito.");
+            }
+            ps.close();
+
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Error al cargar inscripcion" + ex.getMessage());
+        }
+    }
+
   
         public List<Materia> obtenerMateriasCursadas(int idAlumno){
          
@@ -165,6 +191,36 @@ public class InscripcionData {
              return materias;
      }
 
+       public List<Materia> obtenerMateriasCursadasConNotas(int idAlumno) {
+        ArrayList<Materia> materias = new ArrayList<>();
+
+        String sql = "SELECT inscripcion.idMateria, nombre, año, nota "
+                + "FROM inscripcion "
+                + "INNER JOIN materia ON inscripcion.idMateria = materia.idMateria "
+                + "WHERE inscripcion.idAlumno = ?";
+
+        try {
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setInt(1, idAlumno);
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+                Materia materia = new Materia();
+                materia.setIdMateria(rs.getInt("idMateria"));
+                materia.setNombre(rs.getString("nombre"));
+                materia.setAnioMateria(rs.getInt("año"));
+                materia.setNota(rs.getDouble("nota")); // Agregar la nota
+                materias.add(materia);
+            }
+
+            ps.close();
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Error SQL: " + ex.getMessage());
+        }
+
+        return materias;
+    }
+     
      
      public List<Alumno> obtenerAlumnosxMateria(int idMateria){
          

@@ -18,6 +18,13 @@ public class Alumno {
     public Alumno() {
     }
 
+    public Alumno(int idAlumno) {
+        this.idAlumno = idAlumno;
+    }
+
+    
+    
+    
     public Alumno(int dni, String nombre, String apellido, LocalDate fechaNac, boolean estado) {
         this.dni = dni;
         this.nombre = nombre;

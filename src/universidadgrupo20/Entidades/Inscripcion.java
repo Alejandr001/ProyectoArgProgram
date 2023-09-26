@@ -9,6 +9,12 @@ public class Inscripcion {
     private Alumno alumno;
     private double nota;
 
+    public Inscripcion(double nota, Alumno alumno, Materia materia ) {
+        this.materia = materia;
+        this.alumno = alumno;
+        this.nota = nota;
+    }
+
     public Inscripcion(String nombre, Materia materia, double nota) {
         this.nombre = nombre;
         this.materia = materia;

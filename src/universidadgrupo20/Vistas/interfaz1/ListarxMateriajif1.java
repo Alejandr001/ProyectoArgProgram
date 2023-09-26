@@ -1,9 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package universidadgrupo20.Vistas.interfaz1;
+
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.table.DefaultTableModel;
+import universidadgrupo20.Entidades.Alumno;
+import universidadgrupo20.Entidades.Materia;
+import universidadgrupo20.accesoADatos.AlumnoData;
+import universidadgrupo20.accesoADatos.InscripcionData;
+import universidadgrupo20.accesoADatos.MateriaData;
 
 /**
  *
@@ -11,13 +16,82 @@ package universidadgrupo20.Vistas.interfaz1;
  */
 public class ListarxMateriajif1 extends javax.swing.JInternalFrame {
 
-    /**
-     * Creates new form ListarxAlumnojif
-     */
+      private DefaultTableModel modelo = new DefaultTableModel();
+
+    public boolean isCellEditable(int fila, int columna) {
+        return false;
+    }
+     private List<Materia> listaM;
+     private List<Alumno> listaA;
+     private InscripcionData inscData;
+     private MateriaData mData;
+     private AlumnoData aData;
+  
+     
+     
+    
     public ListarxMateriajif1() {
         initComponents();
+           aData = new AlumnoData();
+     
+        modelo = new DefaultTableModel();
+        inscData =new InscripcionData();
+        mData = new MateriaData();
+      
+        cargarMaterias();
+        armarCabezera();
+       
+        
+        
+        
+        
     }
 
+    
+
+    private void armarCabezera() {
+        modelo.addColumn("Id");
+        modelo.addColumn("Dni");
+        modelo.addColumn("Apellido");
+        modelo.addColumn("Nombre");
+       jTable1.setModel(modelo);
+    }
+   
+      private void cargarMaterias() {
+        listaM = mData.listaMaterias();
+   DefaultComboBoxModel<String> comboBoxModel = new DefaultComboBoxModel<>();
+        for (Materia materia : listaM) {
+            comboBoxModel.addElement(materia.getIdMateria() +" "+materia.getNombre());
+            
+        }
+        
+        jComboBoxMaterias.setModel(comboBoxModel);
+        cargarAlumnosDeMateriaSeleccionada();
+        actualizarTablaAlumnos();
+    }
+      
+       private void cargarAlumnosDeMateriaSeleccionada() {
+    int selectedIndex = jComboBoxMaterias.getSelectedIndex();
+    if (selectedIndex != -1) {
+        
+        Materia materiaSeleccionada = listaM.get(selectedIndex);
+        int idMateriaSeleccionada = materiaSeleccionada.getIdMateria(); // Obtener el idMateria de la materia seleccionada
+        
+        listaA = aData.listarAlumnosPORMATERIA(idMateriaSeleccionada);
+        actualizarTablaAlumnos();
+    }
+
+    }
+
+    
+    private void actualizarTablaAlumnos() {
+        modelo.setRowCount(0); 
+        for (Alumno alumno : listaA) {
+            modelo.addRow(new Object[]{alumno.getIdAlumno(), alumno.getDni(), alumno.getApellido(), alumno.getNombre()});
+        }
+    }
+      
+   
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

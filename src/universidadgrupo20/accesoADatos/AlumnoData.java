@@ -46,6 +46,43 @@ public class AlumnoData {
 
     }
 
+    public List<Alumno> listarAlumnosPORMATERIA(int idMateria) {
+
+        List<Alumno> alumnos = new ArrayList<>();
+
+        try {
+
+            String sql = "SELECT a.* \n"
+                    + "FROM alumno a\n"
+                    + "INNER JOIN inscripcion i ON a.idAlumno = i.idAlumno\n"
+                    + "INNER JOIN materia m ON i.idMateria = m.idMateria\n"
+                    + "WHERE m.idMateria =" + idMateria;
+            PreparedStatement ps = con.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+
+                Alumno alumno = new Alumno();
+
+                alumno.setIdAlumno(rs.getInt("idAlumno"));
+                alumno.setDni(rs.getInt("dni"));
+                alumno.setApellido(rs.getString("apellido"));
+                alumno.setNombre(rs.getString("nombre"));
+                alumno.setFechaNac(rs.getDate("fechaNacimiento").toLocalDate());
+                alumno.setEstado(rs.getBoolean("estado"));
+                alumnos.add(alumno);
+            }
+
+            ps.close();
+
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, " Error al acceder a la tabla Alumno " + ex.getMessage());
+        }
+        return alumnos;
+    }
+
+    
+    
     public Alumno buscarAlumno(int id) throws SQLException {
 
         Alumno alumno = null;
