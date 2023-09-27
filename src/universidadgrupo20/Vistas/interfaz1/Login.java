@@ -129,10 +129,10 @@ public class Login extends javax.swing.JFrame {
         jLabel4.setText("¿Olvido su contraseña?");
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel2.setText("Apellido");
+        jLabel2.setText("Contraseña");
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel3.setText("Nombre ");
+        jLabel3.setText("Usuario");
 
         jTextFUSUARUIO.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jTextFUSUARUIO.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
@@ -322,7 +322,8 @@ yMouse=evt.getY();
     }//GEN-LAST:event_jPanelSuperior1MousePressed
 
     private void jPanelSuperior1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelSuperior1MouseDragged
-       int x= evt.getXOnScreen();
+      
+        int x= evt.getXOnScreen();
      int y= evt.getYOnScreen();
         this.setLocation(x-xMouse, y-yMouse);
     }//GEN-LAST:event_jPanelSuperior1MouseDragged

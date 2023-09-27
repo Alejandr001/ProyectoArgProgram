@@ -211,7 +211,7 @@ public class MateriasInscriptasAlumno extends javax.swing.JInternalFrame {
     
     
     
-    
+    ////esto es para mostrar
     
     
     
