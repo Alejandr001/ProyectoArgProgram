@@ -121,7 +121,7 @@ import universidadgrupo20.Entidades.Materia;
     }
     
     public ArrayList<Materia> listaMaterias(){
-    String sql="SELECT nombre, año FROM materia WHERE estado = 1";
+    String sql="SELECT idMateria,nombre, año FROM materia WHERE estado = 1";
         ArrayList <Materia> materias=new ArrayList<>();
         try {
             PreparedStatement ps=con.prepareStatement(sql);
@@ -143,5 +143,30 @@ import universidadgrupo20.Entidades.Materia;
         }
         return materias;
     }
-  
+    public ArrayList<Materia> listaMateriasPorAlumno(int idAlumno) {
+    String sql = "SELECT m.idMateria, m.nombre, m.año FROM materia AS m " +
+                 "INNER JOIN inscripcion AS i ON m.idMateria = i.idMateria " +
+                 "WHERE i.idAlumno = ? AND m.estado = 1";
+    ArrayList<Materia> materias = new ArrayList<>();
+    
+    try {
+        PreparedStatement ps = con.prepareStatement(sql);
+        ps.setInt(1, idAlumno);
+        ResultSet rs = ps.executeQuery();
+        
+        while (rs.next()) {
+            Materia materia = new Materia();
+            materia.setIdMateria(rs.getInt("idMateria"));
+            materia.setNombre(rs.getString("nombre"));
+            materia.setAnioMateria(rs.getInt("año"));
+            materia.setActivo(true);
+            materias.add(materia);
+        }
+        ps.close();
+    } catch (SQLException ex) {
+        JOptionPane.showMessageDialog(null, "Error al obtener la lista de materias por alumno: " + ex.getMessage());
+    }
+    
+    return materias;
+}
   }

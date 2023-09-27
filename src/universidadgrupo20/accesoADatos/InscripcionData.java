@@ -209,7 +209,7 @@ public class InscripcionData {
                 materia.setIdMateria(rs.getInt("idMateria"));
                 materia.setNombre(rs.getString("nombre"));
                 materia.setAnioMateria(rs.getInt("año"));
-                materia.setNota(rs.getDouble("nota")); // Agregar la nota
+                materia.setNota(rs.getDouble("nota")); 
                 materias.add(materia);
             }
 
@@ -248,13 +248,14 @@ public class InscripcionData {
      return alumnosMateria;
      }
      public void actualizarNota(int idAlumno, int idMateria,double nota){
-     String sql="UPDATE inscripcion SET nota = ? WHERE idAlumno = ? AND idMateria";
+     String sql="UPDATE inscripcion SET nota = ? WHERE idAlumno = ? AND idMateria = ?";
          try {
              PreparedStatement ps=con.prepareStatement(sql);
              
              ps.setDouble(1, nota);
              ps.setInt(2, idAlumno);
              ps.setInt(3, idMateria);
+             
             int filas= ps.executeUpdate();
              if(filas>0){
              JOptionPane.showMessageDialog(null,"Nota Actualizada");

@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package universidadgrupo20.Vistas.interfaz1;
 
 import java.sql.Connection;
@@ -13,10 +9,7 @@ import universidadgrupo20.Entidades.Alumno;
 import universidadgrupo20.Entidades.Materia;
 import universidadgrupo20.accesoADatos.InscripcionData;
 
-/**
- *
- * @author User
- */
+
 public class InscripcionMateriaAlumno1 extends javax.swing.JInternalFrame {
 
     private DefaultTableModel modelo = new DefaultTableModel();
@@ -78,73 +71,73 @@ public class InscripcionMateriaAlumno1 extends javax.swing.JInternalFrame {
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
-    private void initComponents() {
-
-        jPanel1 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTableMateriaInscripta = new javax.swing.JTable();
-        jbinscribirse = new javax.swing.JButton();
-
-        setClosable(true);
-        setIconifiable(true);
-        setMaximizable(true);
-        setResizable(true);
-
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Inscripciones a Materias", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 1, 18))); // NOI18N
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jTableMateriaInscripta.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jTableMateriaInscripta.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
-            },
-            new String [] {
-                "Id Materia", "Nombre", "Año"
-            }
-        ));
-        jScrollPane1.setViewportView(jTableMateriaInscripta);
-
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 480, 220));
-
-        jbinscribirse.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jbinscribirse.setText("Inscribirse");
-        jbinscribirse.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbinscribirseActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jbinscribirse, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 260, 129, 37));
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 513, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 322, Short.MAX_VALUE)
-        );
-
-        pack();
-    }// </editor-fold>                        
+//    private void initComponents() {
+//
+//        jPanel1 = new javax.swing.JPanel();
+//        jScrollPane1 = new javax.swing.JScrollPane();
+//        jTableMateriaInscripta = new javax.swing.JTable();
+//        jbinscribirse = new javax.swing.JButton();
+//
+//        setClosable(true);
+//        setIconifiable(true);
+//        setMaximizable(true);
+//        setResizable(true);
+//
+//        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Inscripciones a Materias", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 1, 18))); // NOI18N
+//        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+//
+//        jTableMateriaInscripta.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+//        jTableMateriaInscripta.setModel(new javax.swing.table.DefaultTableModel(
+//            new Object [][] {
+//                {null, null, null},
+//                {null, null, null},
+//                {null, null, null},
+//                {null, null, null},
+//                {null, null, null},
+//                {null, null, null},
+//                {null, null, null},
+//                {null, null, null},
+//                {null, null, null},
+//                {null, null, null},
+//                {null, null, null},
+//                {null, null, null},
+//                {null, null, null},
+//                {null, null, null},
+//                {null, null, null}
+//            },
+//            new String [] {
+//                "Id Materia", "Nombre", "Año"
+//            }
+//        ));
+//        jScrollPane1.setViewportView(jTableMateriaInscripta);
+//
+//        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 480, 220));
+//
+//        jbinscribirse.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+//        jbinscribirse.setText("Inscribirse");
+//        jbinscribirse.addActionListener(new java.awt.event.ActionListener() {
+//            public void actionPerformed(java.awt.event.ActionEvent evt) {
+//                jbinscribirseActionPerformed(evt);
+//            }
+//        });
+//        jPanel1.add(jbinscribirse, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 260, 129, 37));
+//
+//        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+//        getContentPane().setLayout(layout);
+//        layout.setHorizontalGroup(
+//            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+//            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+//                .addContainerGap()
+//                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 513, Short.MAX_VALUE)
+//                .addContainerGap())
+//        );
+//        layout.setVerticalGroup(
+//            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+//            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 322, Short.MAX_VALUE)
+//        );
+//
+//        pack();
+//    }// </editor-fold>                        
 
     private void jbinscribirseActionPerformed(java.awt.event.ActionEvent evt) {                                              
  int filaSeleccionada = jTableMateriaInscripta.getSelectedRow();
@@ -165,39 +158,6 @@ public class InscripcionMateriaAlumno1 extends javax.swing.JInternalFrame {
     }
     }                                             
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    /**
-     * This method is called from within the constructor to initialize the form.
-     * WARNING: Do NOT modify this code. The content of this method is always
-     * regenerated by the Form Editor.
-     */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -205,7 +165,7 @@ public class InscripcionMateriaAlumno1 extends javax.swing.JInternalFrame {
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTableMateriaInscripta = new javax.swing.JTable();
-        jbinscribirse = new javax.swing.JButton();
+        jbInscribirse = new javax.swing.JButton();
 
         setClosable(true);
         setIconifiable(true);
@@ -242,9 +202,14 @@ public class InscripcionMateriaAlumno1 extends javax.swing.JInternalFrame {
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 480, 220));
 
-        jbinscribirse.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jbinscribirse.setText("Inscribirse");
-        jPanel1.add(jbinscribirse, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 260, 129, 37));
+        jbInscribirse.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jbInscribirse.setText("Inscribirse");
+        jbInscribirse.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbInscribirseActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jbInscribirse, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 260, 129, 37));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -263,11 +228,33 @@ public class InscripcionMateriaAlumno1 extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jbInscribirseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbInscribirseActionPerformed
+        int filaSelec = jTableMateriaInscripta.getSelectedRow();
+        if(filaSelec!= -1){
+            int idMateria =(int) jTableMateriaInscripta.getValueAt(filaSelec, 0);
+            double nota = 0.0;
+            inscData.guardarInscripciones(nota, idAlumno, idMateria);
+            modelo.setRowCount(0); 
+            cargarMateriasTable();
+        }
+    }//GEN-LAST:event_jbInscribirseActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTableMateriaInscripta;
-    private javax.swing.JButton jbinscribirse;
+    private javax.swing.JButton jbInscribirse;
     // End of variables declaration//GEN-END:variables
 }
+//    int filaSeleccionada = jTableMateriaInscripta.getSelectedRow();
+//    if (filaSeleccionada != -1) {
+//        int idMateria = (int) jTableMateriaInscripta.getValueAt(filaSeleccionada, 0);
+//        double nota = 0.0; // Puedes cambiar esto para obtener la nota de alguna manera si es necesario
+//        inscData.guardarInscripciones(nota, idAlumno, idMateria);
+//        modelo.setRowCount(0); // Limpia la tabla
+//        cargarMateriasTable(); // Vuelve a cargar las materias en la tabla
+//    } else {
+//        JOptionPane.showMessageDialog(null, "Seleccione una materia para inscribirse");
+//    }
+//}

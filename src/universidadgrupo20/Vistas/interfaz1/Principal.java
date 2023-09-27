@@ -269,19 +269,21 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_JbAlumnoActionPerformed
 
     private void JbListadoMatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbListadoMatActionPerformed
-jDesktopPaneMenuPrincipal.removeAll();
+        jDesktopPaneMenuPrincipal.removeAll();
         jDesktopPaneMenuPrincipal.repaint();
         ListarxMateriajif1 LisM= new ListarxMateriajif1();
         LisM.setVisible(true);
         jDesktopPaneMenuPrincipal.add(LisM);
-        jDesktopPaneMenuPrincipal.moveToFront(LisM); 
-        Dimension desktopSize = jDesktopPaneMenuPrincipal.getSize();
+        jDesktopPaneMenuPrincipal.moveToFront(LisM);
+        
+        
+         Dimension desktopSize = jDesktopPaneMenuPrincipal.getSize();
         Dimension FrameSize = LisM.getSize();
         LisM.setLocation((desktopSize.width - FrameSize.width)/2, (desktopSize.height- FrameSize.height)/2);
         LisM.show();
 
     }//GEN-LAST:event_JbListadoMatActionPerformed
-
+  
     private void JbListadoAluActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbListadoAluActionPerformed
     jDesktopPaneMenuPrincipal.removeAll();
         jDesktopPaneMenuPrincipal.repaint();
